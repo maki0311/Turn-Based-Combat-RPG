@@ -12,7 +12,7 @@ public class FinFanGame extends JFrame {
     private JButton spellButton;
     private JButton defendButton;
     private JButton curaButton;
-    private boolean isDefending; // Track defense state
+    private boolean isDefending; 
 
     private JPanel actionPanel;
     private JPanel spellPanel;
@@ -71,11 +71,11 @@ public class FinFanGame extends JFrame {
         actionPanel.add(attackButton);
         actionPanel.add(spellButton);
         actionPanel.add(defendButton);
-        actionPanel.setVisible(false); // Initially hidden
+        actionPanel.setVisible(false); 
 
         spellPanel = new JPanel(new FlowLayout());
         spellPanel.add(curaButton);
-        spellPanel.setVisible(false); // Initially hidden
+        spellPanel.setVisible(false);
 
         JPanel bottomPanel = new JPanel(new CardLayout());
         bottomPanel.add(actionPanel, "action");
@@ -87,7 +87,7 @@ public class FinFanGame extends JFrame {
     private void startGame() {
         player = new FinFanCharacter("Ezreal", 100, 25);
         enemy = new FinFanCharacter("Troll", 80, 15);
-        isDefending = false; //resets defensive stance
+        isDefending = false; //resets defense stance
 
         gameTextArea.setText("A wild Troll appears!\n");
         updateGameStatus();
@@ -140,7 +140,7 @@ public class FinFanGame extends JFrame {
     }
 
     private void useCura() {
-        player.heal(15);  // Assume FinFanCharacter has a heal method
+        player.heal(15);  
         gameTextArea.append("\nYou use Cura and heal 15 HP.");
         spellPanel.setVisible(false);
         actionPanel.setVisible(true);
