@@ -58,9 +58,9 @@ public class FinFanCharacter {
         }
     }
 
-    // Calculate damage (can be modified as per game logic)
+    // Calculate damage 
     public int calcDamage(FinFanCharacter opponent) {
-        return getAttack(); // Simple implementation; adjust as needed
+        return getAttack(); 
     }
 
     // Heal method
